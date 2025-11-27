@@ -30,7 +30,6 @@ urlpatterns = [
 
     path('logout/', views.logout_view, name='logout'),
     # Chat App URLs
-    path('chat/', include('chat.urls')),
 ]
 
 # Static files
