@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    'storages',
     'home',
     
 ]
@@ -148,7 +148,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATICFILES_DIRS = []
 STATIC_ROOT = BASE_DIR / "staticfiles" 
 
 
@@ -161,7 +161,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = 'syncroomiesbucket'
+AWS_STORAGE_BUCKET_NAME = 'syncroomies'
 AWS_S3_SIGNATURE_NAME = 's3v4'
 AWS_S3_REGION_NAME = 'eu-north-1'
 AWS_S3_FILE_OVERWRITE = False
