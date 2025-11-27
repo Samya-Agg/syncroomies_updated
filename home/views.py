@@ -151,8 +151,12 @@ def index1(request):
 def submit_bfi(request):
     user = request.user
 
+    # User must be logged in
+    if not user.is_authenticated:
+        return redirect('/login/')
+
     # Prevent duplicate submissions
-    if Student_choices.objects.filter(student_id=user).exists():
+    if Student_choices.objects.filter(student_id=user.id).exists():
         return redirect("/results/")
 
     if request.method == "POST":

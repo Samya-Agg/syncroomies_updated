@@ -87,13 +87,14 @@ WSGI_APPLICATION = 'hackathon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("DB_NAME"),
-        'USER': os.getenv("DB_USER"),
-        'PASSWORD': os.getenv("DB_PASSWORD"),
-        'HOST': os.getenv("DB_HOST"),
-        'PORT': os.getenv("DB_PORT"),
+        'NAME': 'SyncRoomies',  # your RDS database name
+        'USER': 'mysuperuser',  # your RDS master username
+        'PASSWORD': 'swassam1625',  # your RDS master password
+        'HOST': 'syncroomies.c1i6uk6smoyr.eu-north-1.rds.amazonaws.com',  # RDS endpoint (no https://)
+        'PORT': '5432',
     }
 }
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
